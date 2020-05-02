@@ -63,9 +63,9 @@ const String kAppLixir = '''
             zoneId: 3033, // the zone ID from the "Games" page
             devId: 4100, // optional: your developer ID if using s2s callback
             gameId: 5071, // optional: the ID for this game from the "Games" page for s2s callback
-            custom1: nnnn, // optional: custom1 value for s2s callback
-            custom2: nnnn, // optional: custom2 value for s2s callback
-            dMode: 1, // 0 for no MD5 checksum, 1 for MD5 checksum (recommended)
+//            custom1: nnnn, // optional: custom1 value for s2s callback
+//            custom2: nnnn, // optional: custom2 value for s2s callback
+            dMode: 0, // 0 for no MD5 checksum, 1 for MD5 checksum (recommended)
             fallback: 0, // 0 for no fallbacks, 1 will show fallback ads when ads-unavailable
             adStatusCb: adStatusCallback, // optional: function to provide helpful user messages
 
