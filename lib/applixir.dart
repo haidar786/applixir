@@ -10,16 +10,22 @@ class AppLixir {
   final Completer<WebViewController> _controller =
       Completer<WebViewController>();
 
-  Widget adView(String html) {
-    final String contentBase64 =
-    base64Encode(const Utf8Encoder().convert(kAppLixir));
+  Widget adView() {
     return WebView(
-      initialUrl: contentBase64,
+      initialUrl: 'https://flutter.dev',
       javascriptMode: JavascriptMode.unrestricted,
       onWebViewCreated: (webViewController) {
         _controller.complete(webViewController);
       },
     );
+  }
+
+  void loadAd() async {
+    final String contentBase64 =
+        base64Encode(const Utf8Encoder().convert(kAppLixir));
+    await _controller.future.then((controller) {
+      controller.loadUrl('data:text/html;base64,$contentBase64');
+    });
   }
 }
 
