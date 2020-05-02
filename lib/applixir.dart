@@ -33,9 +33,9 @@ const String kAppLixir = '''
 <html>
 <body style="background-color: #efe4b0">
 <div id="applixir_vanishing_div" hidden>
-    <iframe id="applixir_parent" allow="autoplay, fullscreen"></iframe>
+   <iframe id="applixir_parent" allow="autoplay"></iframe>
 </div>
-
+</div>
     <script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk3.0m.js"></script>
 
     <script type='application/javascript'>
